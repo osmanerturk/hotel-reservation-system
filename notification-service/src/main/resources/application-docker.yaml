@@ -1,0 +1,9 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: notification-service
+
+  kafka:
+    bootstrap-servers: kafka:9092
