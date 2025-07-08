@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          default-filters:
+            - AddResponseHeader=X-Gateway, HOTEL API GATEWAY, HOTEL API GATEWAY
+
+
+services:
+  hotel: http://localhost:8081
+  reservation: http://localhost:8082

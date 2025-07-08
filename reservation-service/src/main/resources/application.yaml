@@ -1,0 +1,27 @@
+server:
+  port: 8082
+
+spring:
+
+  kafka:
+    bootstrap-servers: localhost:29092
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/reservation_db
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  application:
+    name: reservation-service
+
+services:
+  hotel: http://localhost:8081
+
